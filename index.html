@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <head>
-  <title>Joey Fay: Personal Website Portfolio</title>
-  <link rel="stylesheet" type = "text/css" href ="stylesheet.css">
+  <title>Joseph Fay: Personal Website Portfolio</title>
+  <link rel="stylesheet" type = "text/css" href ="css/stylesheet.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
-    <script type="text/javascript" src="starfield/sketch.js"></script>
-    <script type="text/javascript" src="starfield/Star.js"></script>-->
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <html>
   <body>
+
+
     <div class="header">
-      <div class="name"><span></span></div>
-      <div class="dropdown">
-	<button onclick="dropMenu()" class="dropbtn"> Menu </button>
-	<div id="myDropdown" class="dropdown-content">
-	  <a href="landing.html">Home</a>
-	  <a href="landing.html#aboutMe">About Me</a>
-	  <a href="landing.html#experience">Education/Experience</a>
-	  <a href="visualizer.html">Projects</a>
-	  <a href="contact.html">Contact/Resume</a>
-	</div>
+      <div class="name"><span>JF</span></div>
+        <!--<div class="dropdown">
+	       <button onclick="dropMenu()" class="dropbtn"> Menu </button>
+	        <div id="myDropdown" class="dropdown-content">
+	           <a href="index.html">Home</a>
+	           <a href="index.html#aboutMe">About Me</a>
+	           <a href="index.html#experience">Education/Experience</a>
+	           <a href="visualizer.html">Projects</a>
+	           <a href="contact.html">Contact/Resume</a>
+	        </div>-->
       </div>
     </div>
+    <div class="vl"></div>
+
      <div class="hero-image">
-       <div class="hero-text">
-	 <h1>Joey Fay</h1>
-	 <p>A Personal Website Portfolio</p>
+       <div class="hero-txt">
+           <h1>Joseph Fay</h1>
+           <p>A Personal Website Portfolio</p>
        </div>
      </div>
-    <div class="paragraphs">
-      <h3 id = "purpose">Purpose</h3>
-      <p id = "a">
-	The purpose of this webpage is to start to learn web programming for future use, since I do not have much front-end experience. I never have given much thought to the idea of front-end programming since I always thought I would need an extremely creative/artistic mindset in order to succeed. However, I decided to dive in with this website and have really enjoyed learning the fundamentals of web programming.
-      </p>
-      <h3 id="aboutMe">About Me</h3>
-      <p id="b"> I was born and raised in Chicago, Illinois. I first began trying to code when I was 14 years old. But I had a rough time trying to teach myself with online resources. Even when I was applying to colleges I had a hard time deciding what to major in. I decided to give Computer Science a chance in the hopes that I would thrive in a classroom environment, and I did. Since then, I have been driven in my education and trying to graduate as a major in Computer Science and a minor in Statistics.
-      </p>
-      <h3 id="experience">Experience</h3>
-      <p id="c">  I have worked on many projects for school in languages such as Python, C, C++, Java, OCaml.
-      </p>
-    </div>
-    <script>
+    <div class="box">
+      <div id = "experience" class = "left-box" data-aos="fade-up-right" data-aos-duration="2000" data-aos-once="true">
+        <h3 class = "box-title">Education<hr></h3>
+        <p style="text-indent: 40px" class = "box-txt" id = "experience-txt">
+          I am currently a Senior at the University of Minnesota, majoring in Computer Science in the College of Science and Engineering with a minor in Statistics. I decided to focus my upper division courses on <b>data-driven computing</b>, which focuses on disciplines such as data science, big data, and GIS.
+        </p>
+        <p style="text-indent: 40px">
+          I have worked with many languages in class so far, gaining experience in relational databases using mySQL, object-oriented programming in Python/Java/C++, to low level programming in C. For my stats minor, I have used R and Python in statistical computing classes to develop statistical models, including time series analysis, multiple linear regression, and using statistical inference to inform real-world decisions.
+        </p>
+      </div>
+
+      <div id = "aboutMe" class = "right-box" data-aos="fade-up-left" data-aos-duration="2000" data-aos-once="true">
+        <h3 class = "box-title">About Me<hr></h3>
+        <p style="text-indent: 40px" class = "box-txt" id = "aboutMe-txt">
+          I was born and raised in Chicago, Illinois. I first began trying to code when I was 14 years old. However, I had difficulty learning on my own and my high school did not have the resources to provide programming courses. I had a hard time deciding what to major in, but I decided to try CS in the hopes that I would thrive in a classroom environment that I was never had access to before. </p>
+          <p style="text-indent: 40px" class = "box-txt">Since then, I've studied Computer Science almost exclusively since Spring Semester of my Sophomore year, beginning my minor around the same time. I've now began to focus on studying databases and learning how industries across the spectrum work with large sets of data available to them to inform business decisions.</p>
+      </div>
+
+      <div id = "purpose" class = "left-box" data-aos="fade-up-right" data-aos-duration="2000" data-aos-once="true">
+        <h3 class = "box-title">Purpose<hr></h3>
+        <p style="text-indent: 40px" class = "box-txt" id = "purpose-txt">
+	         The purpose of this webpage is to understand the fundamentals of web development, which I do not have much experience in.So I decided to develop this website with no assistance from front-end frameworks in order to better understand the fundamentals of HTML, CSS, and a little JavaScript.
+        </p>
+      </div>
+
+      <div id = "projects" class = "right-box" data-aos="fade-up-left" data-aos-duration="2000" data-aos-once="true">
+        <h3 class = "box-title">Other Projects<hr></h3>
+        <p class = "box-txt" id="projects-txt">
+          <b>Spotitheta:</b> Using Spotify's Web API along with Node.js and Express frameworks, calculate a "genre vector" for the user based off their recent listening history, and let them directly see how similar their recent music taste is to any other user that has used the app via <a id = "cos-link" href = "https://stackoverflow.com/questions/1746501/can-someone-give-an-example-of-cosine-similarity-in-a-very-simple-graphical-wa" target="_blank">cosine similarity</a>, essentially finding the angle between two user genre vectors to determine how similar they are.
+        </p>
+        <p class = "box-txt">
+          <b>MapReduce on Text File System:</b> Implement the MapReduce model and utilize multi-threading, TCP, locks/mutexes, etc. to divy up the processing of text files in an arbitrarily sized file system and count the occurences of the first letters of every word in the text files.
+        </p>
+        <p class = "box-txt">
+          <b>Transit System Simulator:</b> A simple transit simulator and visualizer, developed over a semester to be able to determine the most efficient scheduling for UMN campus shuttles. Project was developed in C++ and main goals were to become acclimated to a large-scale software development process through all stages and learn good documentation practices.
+        </p>
+
+      </div>
+
+      <div id = "footer">
+        <ul>
+          <li><a href="https://github.com/jmfay">Github</a></li>
+          <li><a href="https://linkedin.com/in/jmfay">LinkedIn</a></li>
+          <li><a href="https://docs.google.com/document/d/1Md9SWOVezbdVggKiQ45nZL-03Rby_s9RUP8EuZuGmUo/edit?usp=sharing" target = "_blank">Resume</a></li>
+          <li><a href="mailto:fayxx092@umn.edu">fayxx092@umn.edu</a></li>
+        </ul>
+      </div>
+
+
+      
+    <!--<script>
       function dropMenu() {
       document.getElementById("myDropdown").classList.toggle("show");
       }
@@ -60,6 +98,10 @@
 		      }
 		      }
 		      }
-		      </script>
+          </script>-->
+      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
 </html>
