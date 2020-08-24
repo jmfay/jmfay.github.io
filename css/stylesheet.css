@@ -2,7 +2,6 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    color: white;
     font-family: Palatino, 'Palatino Linotype',serif;
 
 
@@ -12,28 +11,36 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    text-align:center;
 }
 
 
 /*Hero image block reserved, not sure why I need this*/
 .hero-image {
-    width: 100vw;
     height: 120vh;
-    z-index: 1;
+    z-index: 1;   
 }
 
 .hero-txt {
+    color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: inherit;
     animation: appearUp 2s;
     animation-fill-mode: forward;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 32px;
+    font-size: 1.65vmax;
+}
+
+#hero-name {
+  margin-bottom: 0vw;
+}
+
+#hero-title {
+  margin-top: 1.25vw;
 }
 
 /* Hero text animation */
@@ -55,18 +62,17 @@ body {
     padding: 25px 25px;
     position: fixed;
     z-index: 2;
-    top: 0px;
+    top: 0;
 }
 
 .name {
     -webkit-transition: all 0.3s ease;
-    color: inherit;
+    color: white;
     font-family: inherit;
-    font-size: 36px;
+    font-size: 2.5vw;
     overflow: hidden;
     float: left;
-    width: 43px;
-    opacity: 1;
+    width: 3vmax;
 }
 
 .name:hover {
@@ -74,26 +80,78 @@ body {
     letter-spacing: 5px;
 }
 
+.center{
+  text-align: center;
+}
+#file-button{
+  position:relative;
+  margin:auto;
+  padding: 0;
+  top: 45%;
+  animation: breathing 5s ease-in infinite normal;
+  animation-delay: 11s;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+#file-button:hover{
+  color: #bfbfbf;
+  cursor: pointer;
+  background-color: black;
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
 /*centerline*/
 .vl {
     border-left: 1px solid white;
-    width: 1px;
+    width: 0px;
     position: absolute;
     left: 50%;
-    margin-left: -3px;
-    top: 80%;
-    animation: draw-line 4s;
-    animation-delay: 3s;
+    top: 70%;
+    animation: draw-line 5s;
+    animation-delay: 6s;
     animation-fill-mode: forwards;
     z-index: -1;
 }
 
-hr {
-  margin: auto;
-  margin-top: 10px;
-  width: 90%;
-  bottom: 50%
-}
+/*centerline
+.vl2 {
+  border-left: 1px solid white;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 80%;
+  animation: replaceline 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  z-index: -2;
+  height:
+}*/
+
+
 
 @keyframes draw-line { 
   0% { 
@@ -102,13 +160,20 @@ hr {
   
   10% {
     height: 5px;
-    top: 75%;
+    top:65%;
   }
 
   100% { 
-    height: 250%;
+    height: 150%;
   } 
 } 
+
+@keyframes replace-line {
+  0%{
+    opacity:0
+  }
+  100%{opacity:1}
+}
 
 @media only screen and (min-width:1200px){
     
@@ -132,21 +197,36 @@ hr {
 
 .content{
   margin: 0% 4%;
+  height: 100%;
 }
 
 .content-box{
+  text-align: left;
   font-size: 18px;
   color: black;
-  background-color: #F5EBE0;
+  background-color: #ffffff;
   border: 15px solid #064A74;
   border-radius: 50px 15px;
-  padding: 50px;
   position: relative;
   box-shadow: 0 0 10px 2px #064A74;
   font-family: Palatino, 'Palatino Linotype',serif;
   padding: 25px 50px;
 }
 
+.box-title{
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+hr {
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  bottom: 50%
+}
 .box-txt{
   margin-top: 0px;
 }
@@ -157,14 +237,6 @@ hr {
 
 #cos-link:visited {
   color: purple;
-}
-
-.box-title{
-  text-align: center;
-  position: relative;
-  bottom: 30px;
-  font-size: 30px;
-  margin-bottom: 0px;
 }
 
 
@@ -212,6 +284,7 @@ li:last-child {
   width: 100%;
   line-height: 1.3;
   font-family: Menlo, monospace;
+  font-size: 1vw;;
   box-shadow: 0 0 15px 5px #000000;
 }
 
