@@ -205,10 +205,10 @@ body {
   font-size: 18px;
   color: black;
   background-color: #ffffff;
-  border: 15px solid #064A74;
+  border: 15px solid #1F824C;
   border-radius: 50px 15px;
   position: relative;
-  box-shadow: 0 0 10px 2px #064A74;
+  box-shadow: 0 0 10px 2px #1F824C;
   font-family: Palatino, 'Palatino Linotype',serif;
   padding: 25px 50px;
 }
